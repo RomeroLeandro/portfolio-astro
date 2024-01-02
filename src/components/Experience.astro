@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  {
+    date: "Julio 2023",
+    title: "Desarrollador Frontend − Freelance",
+    description:
+      "Gestión del estado y lógica de la aplicación con React Hooks y Redux. Creación de rutas y navegación con React Router. Colaboración con diseñadores para asegurar la implementación de la interfaz de usuario.",
+    link: "https://twitch.tv/midudev",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

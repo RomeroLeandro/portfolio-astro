@@ -1,0 +1,40 @@
+---
+import Github from "../icons/Github.astro";
+import Button from "./Button.astro";
+import Code from "../icons/Code.astro";
+interface Props {
+  title: string;
+  description: string;
+  link?: string;
+  date: string;
+}
+
+const { title, description, link, date } = Astro.props;
+---
+
+<div
+  class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"
+>
+</div>
+<time
+  class="mb-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80"
+  >{date}</time
+>
+<h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mt-2">
+  {title}
+</h3>
+<p class="mb-4 text-base font-normal dark:text-gray-200 text-pretty">
+  {description}
+</p>
+{
+  link && (
+    <nav class="flex gap-4 mt-8 flex-wrap">
+      <Button href={link} class="text-sm font-semibold">
+        <Github class="size-4" /> Repositorio
+      </Button>
+      <Button href={link} class="text-sm font-semibold">
+        <Code class="size-4" /> Sitio web
+      </Button>
+    </nav>
+  )
+}

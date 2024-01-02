@@ -3,11 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 import LinkedinIcon from "../icons/Linkedin.astro";
 import GithubIcon from "../icons/Github.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCase from "../icons/BriefCase.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main class="">
-    <section class="text-white m-auto w-full lg:w-[800px] py-44">
+    <SectionContainer class="py-44 pb-32">
       <h1 class="text-5xl font-bold pb-8">
         Hola, Soy <span class="text-violet-600">Leandro Romero</span>
       </h1>
@@ -25,7 +28,16 @@ import GithubIcon from "../icons/Github.astro";
           <GithubIcon class="size-4" /> Github
         </Button>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer>
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <BriefCase class="size-7" />
+         Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 
   <style></style>
