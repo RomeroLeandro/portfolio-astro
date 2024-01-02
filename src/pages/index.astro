@@ -1,9 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+import LinkedinIcon from "../icons/Linkedin.astro";
+import GithubIcon from "../icons/Github.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="h-[3000px]"></main>
-</Layout>
+  <main class="">
+    <section class="text-white m-auto w-full lg:w-[800px] py-44">
+      <h1 class="text-5xl font-bold pb-8">
+        Hola, Soy <span class="text-violet-600">Leandro Romero</span>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-balance max-w-[600px] leading-3">
+        +1 año de experiencia. <span class="text-violet-300"
+          >Desarrollador Fullstack</span
+        >. <span class="text-cyan-300">De Buenos Aires, Argentina.</span>
+        <span class="text-yellow-100">Especializado en aplicaciones web.</span>
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <Button>
+          <LinkedinIcon class="size-4" /> Linkedin
+        </Button>
+        <Button>
+          <GithubIcon class="size-4" /> Github
+        </Button>
+      </nav>
+    </section>
+  </main>
 
-<style></style>
+  <style></style>
+</Layout>
