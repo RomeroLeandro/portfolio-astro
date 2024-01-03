@@ -28,10 +28,7 @@ const { title, description, link, date } = Astro.props;
 </p>
 {
   link && (
-    <nav class="flex gap-4 mt-8 flex-wrap">
-      <Button href={link} class="text-sm font-semibold">
-        <Github class="size-4" /> Repositorio
-      </Button>
+    <nav class="flex gap-4 mt-4 flex-wrap">
       <Button href={link} class="text-sm font-semibold">
         <Code class="size-4" /> Sitio web
       </Button>

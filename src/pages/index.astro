@@ -6,6 +6,7 @@ import GithubIcon from "../icons/Github.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../icons/BriefCase.astro";
+import Proyects from "../components/Proyects.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -38,7 +39,16 @@ import BriefCase from "../icons/BriefCase.astro";
       </h2>
       <Experience />
     </SectionContainer>
-  </main>
+    <SectionContainer>
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <BriefCase class="size-7" />
+         Proyectos
+      </h2>
+      <Proyects />
+    </SectionContainer>
 
-  <style></style>
+    <style></style>
+  </main>
 </Layout>
