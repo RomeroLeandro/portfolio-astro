@@ -9,6 +9,8 @@ import BriefCase from "../icons/BriefCase.astro";
 import Proyects from "../components/Proyects.astro";
 import Skills from "../components/Skills.astro";
 import CodeIcon from "../icons/Code.astro";
+import About from "../components/About.astro";
+import Arrow from "../icons/Arrow.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -29,6 +31,9 @@ import CodeIcon from "../icons/Code.astro";
         </Button>
         <Button>
           <GithubIcon class="size-4" /> Github
+        </Button>
+        <Button href="#sobre-mi">
+          <Arrow class="size-7" /> Saber más
         </Button>
       </nav>
     </SectionContainer>
@@ -51,6 +56,7 @@ import CodeIcon from "../icons/Code.astro";
       <Proyects />
     </SectionContainer>
     <Skills />
+    <About />
 
     <style></style>
   </main>
