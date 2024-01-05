@@ -7,11 +7,13 @@ import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../icons/BriefCase.astro";
 import Proyects from "../components/Proyects.astro";
+import Skills from "../components/Skills.astro";
+import CodeIcon from "../icons/Code.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main class="">
-    <SectionContainer class="py-44 pb-32">
+    <SectionContainer class="py-44 pb-32" id="inicio">
       <h1 class="text-5xl font-bold pb-8">
         Hola, Soy <span class="text-violet-600">Leandro Romero</span>
       </h1>
@@ -30,24 +32,25 @@ import Proyects from "../components/Proyects.astro";
         </Button>
       </nav>
     </SectionContainer>
-    <SectionContainer>
+    <SectionContainer id="experiencia">
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
         <BriefCase class="size-7" />
-         Experiencia laboral
+        Experiencia laboral
       </h2>
       <Experience />
     </SectionContainer>
-    <SectionContainer>
+    <SectionContainer id="proyectos">
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
-        <BriefCase class="size-7" />
-         Proyectos
+        <CodeIcon class="size-7" />
+        Proyectos
       </h2>
       <Proyects />
     </SectionContainer>
+    <Skills />
 
     <style></style>
   </main>

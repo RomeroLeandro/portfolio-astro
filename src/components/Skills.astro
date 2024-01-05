@@ -1,0 +1,166 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import CodeIcon from "../icons/Code.astro";
+import HTML from "../icons/HTML.astro";
+import CSS from "../icons/CSS.astro";
+import JS from "../icons/JavaScript.astro";
+import TS from "../icons/TypeScript.astro";
+import React from "../icons/React.astro";
+import Angular from "../icons/Angular.astro";
+import Redux from "../icons/Redux.astro";
+import NextJS from "../icons/NextJS.astro";
+import Vite from "../icons/Vite.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import MaterialUI from "../icons/MaterialUI.astro";
+import Sass from "../icons/Sass.astro";
+import StyledComponents from "../icons/Styled.astro";
+import NodeJS from "../icons/NodeJS.astro";
+import Express from "../icons/ExpressJS.astro";
+import NestJS from "../icons/NestJS.astro";
+import SocketIO from "../icons/SocketIO.astro";
+import MongoDB from "../icons/MongoDB.astro";
+import Firebase from "../icons/Firebase.astro";
+import Git from "../icons/Git.astro";
+import Github from "../icons/Github.astro";
+import Npm from "../icons/Npm.astro";
+import Docker from "../icons/Docker.astro";
+import Figma from "../icons/Figma.astro";
+import Photoshop from "../icons/Photoshop.astro";
+import Jwt from "../icons/Jwt.astro";
+import Netlify from "../icons/Netlify.astro";
+import Vercel from "../icons/Vercel.astro";
+import Railway from "../icons/Railway.astro";
+import Postman from "../icons/Postman.astro";
+import Python from "../icons/Python.astro";
+import Swagger from "../icons/Swagger.astro";
+import WebStorm from "../icons/WebStorm.astro";
+import VSCode from "../icons/VSCode.astro";
+
+const ICONS = {
+  FRONTEND: {
+    html: HTML,
+    css: CSS,
+    js: JS,
+    ts: TS,
+    react: React,
+    redux: Redux,
+    angular: Angular,
+    next: NextJS,
+    vite: Vite,
+    astro: AstroIcon,
+    bootstrap: Bootstrap,
+    tailwind: Tailwind,
+    material: MaterialUI,
+    sass: Sass,
+    styled: StyledComponents,
+  },
+  BACKEND: {
+    js: JS,
+    node: NodeJS,
+    express: Express,
+    nest: NestJS,
+    socket: SocketIO,
+    mongo: MongoDB,
+    firebase: Firebase,
+  },
+};
+---
+
+<SectionContainer>
+  <h2
+    class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+  >
+    <CodeIcon class="size-7" />
+    Habilidades
+  </h2>
+  <section
+    class={`
+    w-full
+    grid lg:grid-cols-10 auto-rows-[20rem] gap-4
+    mx-auto
+  
+  `}
+  >
+    <div
+      class="col-span-6 flex flex-col justify-between p-5 items-center rounded-3xl shadow-xl shadow-white/10 border-violet-950 border-2 bg-black/95"
+    >
+      <h3 class="text-lg">FRONTEND</h3>
+      <div class="flex flex-row flex-wrap gap-4 justify-center items-center">
+        <HTML class="size-16" />
+        <CSS class="size-16" />
+        <JS class="size-16" />
+        <TS class="size-16" />
+        <React class="size-16" />
+        <Redux class="size-16" />
+        <Angular class="size-16" />
+        <NextJS class="size-16" />
+        <AstroIcon class="size-16" />
+        <Bootstrap class="size-16" />
+        <Tailwind class="size-16" />
+        <MaterialUI class="size-16" />
+        <Sass class="size-16" />
+        <StyledComponents class="size-16" />
+      </div>
+    </div>
+    <div
+      class="col-span-4 flex flex-col justify-between p-5 items-center rounded-3xl shadow-xl shadow-white/10 border-violet-950 border-2 bg-black/95"
+    >
+      <h3 class="text-lg">BACKEND</h3>
+      <div class="flex flex-row flex-wrap gap-4 justify-center items-center">
+        <JS class="size-16" />
+        <NodeJS class="size-16" />
+        <Express class="size-16" />
+        <NestJS class="size-16" />
+        <SocketIO class="size-16" />
+        <Python class="size-16" />
+        <Jwt class="size-12" />
+      </div>
+    </div>
+    <div
+      class="col-span-2 flex flex-col justify-between p-5 items-center rounded-3xl shadow-xl shadow-white/10 border-violet-950 border-2 bg-black/95"
+    >
+      <h3 class="text-lg text-center">BASE DE DATOS</h3>
+      <div class="flex flex-row flex-wrap gap-4 justify-center items-center">
+        <MongoDB class="size-16" />
+        <Firebase class="size-16" />
+      </div>
+    </div>
+    <div
+      class="col-span-4 flex flex-col justify-between p-5 items-center rounded-3xl shadow-xl shadow-white/10 border-violet-950 border-2 bg-black/95"
+    >
+      <h3 class="text-lg">HERRRAMIENTAS</h3>
+      <div class="flex flex-row flex-wrap gap-4 justify-center items-center">
+        <Npm class="size-16" />
+        <Vite class="size-16" />
+        <Git class="size-16" />
+        <Github class="size-16" />
+        <Docker class="size-16" />
+        <WebStorm class="size-16" />
+        <VSCode class="size-16" />
+        <Swagger class="size-16" />
+        <Postman class="size-16" />
+      </div>
+    </div>
+    <div
+      class="col-span-2 flex flex-col justify-between p-5 items-center rounded-3xl shadow-xl shadow-white/10 border-violet-950 border-2 bg-black/95"
+    >
+      <h3 class="text-lg">DESPLIEGUE</h3>
+      <div class="flex flex-col flex-wrap gap-4 justify-center items-center">
+        <Vercel class="size-16" />
+        <Netlify class="size-16" />
+        <Railway class="size-16" />
+      </div>
+    </div>
+    <div
+      class="col-span-2 flex flex-col justify-between p-5 items-center rounded-3xl shadow-xl shadow-white/10 border-violet-950 border-2 bg-black/95"
+    >
+      <h3 class="text-lg">DISEÑO</h3>
+      <div class="flex flex-row flex-wrap gap-4 justify-center items-start">
+        <Figma class="size-16" />
+        <Photoshop class="size-16" />
+      </div>
+    </div>
+  </section>
+</SectionContainer>
