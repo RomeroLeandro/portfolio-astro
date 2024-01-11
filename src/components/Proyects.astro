@@ -1,280 +1,55 @@
 ---
-import NextJS from "../icons/NextJS.astro";
-import Tailwind from "../icons/Tailwind.astro";
-import TypeScript from "../icons/TypeScript.astro";
-import Sass from "../icons/Sass.astro";
-import Firebase from "../icons/Firebase.astro";
-import MongoDB from "../icons/MongoDB.astro";
-import ExpressJS from "../icons/ExpressJS.astro";
-import NestJS from "../icons/NestJS.astro";
-import NodeJS from "../icons/NodeJS.astro";
-import MaterialUI from "../icons/MaterialUI.astro";
-import Bootstrap from "../icons/Bootstrap.astro";
-import Astroicon from "../icons/AstroIcon.astro";
-import Vite from "../icons/Vite.astro";
-import Angular from "../icons/Angular.astro";
-import React from "../icons/React.astro";
-import JavaScript from "../icons/JavaScript.astro";
-import CSS from "../icons/CSS.astro";
-import HTML from "../icons/HTML.astro";
-import Redux from "../icons/Redux.astro";
-import Button from "./Button.astro";
-import Socket from "../icons/SocketIO.astro";
 import CodeIcon from "../icons/Code.astro";
 import GithubIcon from "../icons/Github.astro";
-import Styled from "../icons/Styled.astro";
-
-const TAGS = {
-  SOCKET: {
-    name: "Socket.io",
-    class: "bg-[#01010180] text-white",
-    icon: Socket,
-  },
-  HTML: {
-    name: "HTML",
-    class: "bg-[#E34F2680] text-white",
-    icon: HTML,
-  },
-  CSS: {
-    name: "CSS",
-    class: "bg-[#1572B680] text-white",
-    icon: CSS,
-  },
-  JAVASCRIPT: {
-    name: "JavaScript",
-    class: "bg-[#F7DF1E80] text-white",
-    icon: JavaScript,
-  },
-  REACT: {
-    name: "React",
-    class: "bg-[#61DAFB80] text-white",
-    icon: React,
-  },
-  ANGULAR: {
-    name: "Angular",
-    class: "bg-[#DD003195] text-white",
-    icon: Angular,
-  },
-  VITE: {
-    name: "Vite",
-    class: "bg-[#646CFF96] text-white",
-    icon: Vite,
-  },
-  ASTROICON: {
-    name: "Astro",
-    class: "bg-[#0D111780] text-white",
-    icon: Astroicon,
-  },
-  BOOTSTRAP: {
-    name: "Bootstrap",
-    class: "bg-[#7952B380] text-white",
-    icon: Bootstrap,
-  },
-  MATERIALUI: {
-    name: "Material UI",
-    class: "bg-[#0081CB80] text-white",
-    icon: MaterialUI,
-  },
-  NODEJS: {
-    name: "Node.js",
-    class: "bg-[#33993380] text-white",
-    icon: NodeJS,
-  },
-  NESTJS: {
-    name: "NestJS",
-    class: "bg-[#E0234E80] text-white",
-    icon: NestJS,
-  },
-  EXPRESSJS: {
-    name: "Express.js",
-    class: "bg-[#00000080] text-white",
-    icon: ExpressJS,
-  },
-  MONGODB: {
-    name: "MongoDB",
-    class: "bg-[#47A24880] text-white",
-    icon: MongoDB,
-  },
-  FIREBASE: {
-    name: "Firebase",
-    class: "bg-[#FFCA2880] text-white",
-    icon: Firebase,
-  },
-  SASS: {
-    name: "Sass",
-    class: "bg-[#CC669980] text-white",
-    icon: Sass,
-  },
-  TYPESCRIPT: {
-    name: "TypeScript",
-    class: "bg-[#3178C680] text-white",
-    icon: TypeScript,
-  },
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-  REDUX: {
-    name: "Redux",
-    class: "bg-[#764ABC80] text-white",
-    icon: Redux,
-  },
-  STYLED: {
-    name: "Styled Components",
-    class: "bg-[#DB709380] text-white",
-    icon: Styled,
-  },
-};
-const PROJECTS = [
-  {
-    title: "Portfolio V1",
-    description:
-      "Atractivo portfolio personal con HTML, CSS, JavaScript y SCSS, como proyecto final del curso de Desarrollo Web.",
-    link: "https://portfolioleandroromero.vercel.app/",
-    github: "https://github.com/RomeroLeandro/PortfolioV1",
-    image: "/projects/portfolio-v1.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.SASS, TAGS.BOOTSTRAP],
-  },
-  {
-    title: "Romero Desing",
-    description:
-      "Ecommerce funcional con experiencia de compra intuitiva y sin complicaciones. HTML, CSS y JavaScript utilizados.",
-    link: "https://romero-desing.vercel.app/",
-    github: "https://github.com/RomeroLeandro/RomeroDesing-ecommerce",
-    image: "/projects/romero-desing.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
-  },
-  {
-    title: "Dixer Gaming",
-    description:
-      "Ecommerce con React, Redux y Firebase para el manejo de estado y almacenamiento de datos. Navegación y filtrado intuitivos. Carrito de compras funcional. Diseño con CSS y Bootstrap.",
-    link: "https://dixer-gaming.vercel.app/",
-    github: "https://github.com/RomeroLeandro/Dixer-gaming-ecommerce",
-    image: "/projects/dixer-gaming.png",
-    tags: [TAGS.REACT, TAGS.REDUX, TAGS.FIREBASE, TAGS.CSS, TAGS.BOOTSTRAP],
-  },
-  {
-    title: "Baires Trips",
-    description:
-      "Calculadora de costos de viaje web con interfaz intuitiva. Desarrollada en HTML, CSS y JavaScript. Escalable y adaptable.",
-    link: "https://baires-trips.vercel.app/",
-    github: "https://github.com/RomeroLeandro/baires-trips-calculadora",
-    image: "/projects/baires-trips.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
-  },
-  {
-    title: "Codeando plataforma",
-    description:
-      "Calculadora de costos de viaje web con interfaz intuitiva. Desarrollada en HTML, CSS y JavaScript. Escalable y adaptable.",
-    link: "https://codeando-plataforma.vercel.app/auth/login",
-    github: "https://github.com/RomeroLeandro/codeando-plataforma",
-    image: "/projects/codeando-plataforma.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.TYPESCRIPT, TAGS.ANGULAR],
-  },
-  {
-    title: "Travel Xplorer",
-    description:
-      "Calculadora de costos de viaje web con interfaz intuitiva. Desarrollada en HTML, CSS y JavaScript. Escalable y adaptable.",
-    link: "https://travel-xplorer.vercel.app/persons",
-    github: "https://github.com/RomeroLeandro/TravelXplorer",
-    image: "/projects/travel-xplorer.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.TYPESCRIPT, TAGS.ANGULAR],
-  },
-  {
-    title: "Fake Shop",
-    description:
-      "Calculadora de costos de viaje web con interfaz intuitiva. Desarrollada en HTML, CSS y JavaScript. Escalable y adaptable.",
-    link: "https://fake-shop-kappa-two.vercel.app",
-    github: "https://github.com/RomeroLeandro/ecommerce-arg-prog-4.0",
-    image: "/projects/faker-shop.png",
-    tags: [TAGS.VITE, TAGS.REACT, TAGS.REDUX, TAGS.MATERIALUI, TAGS.STYLED],
-  },
-  {
-    title: "Appartamentos",
-    description:
-      "Calculadora de costos de viaje web con interfaz intuitiva. Desarrollada en HTML, CSS y JavaScript. Escalable y adaptable.",
-    link: "https://appartments-c12-25.vercel.app/",
-    github: "https://github.com/No-Country/c12-25-t-node-react",
-    image: "/projects/appartamentos.png",
-    tags: [TAGS.VITE, TAGS.REACT, TAGS.REDUX, TAGS.MATERIALUI, TAGS.FIREBASE],
-  },
-  // TODO: Add project image and url web
-  {
-    title: "backend coderhouse",
-    description:
-      "Calculadora de costos de viaje web con interfaz intuitiva. Desarrollada en HTML, CSS y JavaScript. Escalable y adaptable.",
-    link: "https://github.com/RomeroLeandro/Proyecto-final-backend",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [
-      TAGS.HTML,
-      TAGS.CSS,
-      TAGS.JAVASCRIPT,
-      TAGS.NODEJS,
-      TAGS.EXPRESSJS,
-      TAGS.MONGODB,
-      TAGS.SOCKET,
-    ],
-  },
-  // TODO: Add project image and url web
-  {
-    title: "portfolio astro",
-    description:
-      "Calculadora de costos de viaje web con interfaz intuitiva. Desarrollada en HTML, CSS y JavaScript. Escalable y adaptable.",
-    link: "https://github.com/RomeroLeandro/portfolio-astro",
-    github: "https://github.com/RomeroLeandro/portfolio-astro",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.ASTROICON, TAGS.TAILWIND, TAGS.TYPESCRIPT],
-  },
-];
+import Button from "./Button.astro";
+import { PROJECTS } from "../database/projects";
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-row pb-12 gap-6">
-      <div>
-        <img
-          loading="lazy"
-          class="rounded-3xl  shadow-2xl shadow-white/10 aspect-video min-w-[300px] w-[300px] h-[200px]"
-          src={image}
-          alt={`Captura de pantalla del proyecto ${image}`}
-        />
-        <nav class="flex flex-row justify-center items-center gap-3 pt-4">
-          <Button href={github} class="bg-violet-700">
-            <GithubIcon class="size-4" /> Repositorio
-          </Button>
-          <Button href={link}>
-            <CodeIcon /> Sitio web
-          </Button>
-        </nav>
-      </div>
-      <div class="max-w-[500px]">
-        <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
-          {title}
-        </h3>
-        <p class="text-lg mb-4 text-pretty">{description}</p>
-        <ul class="flex gap-x-2 flex-row mb-2 flex-wrap">
-          {tags.map((tag) => (
-            <li class="pb-2">
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </article>
-  ))
+  PROJECTS.filter((proyect) => proyect.important === true).map(
+    ({ image, title, description, tags, link, github }) => (
+      <>
+        <article class="flex flex-row pb-12 gap-6">
+          <div>
+            <img
+              loading="lazy"
+              class="rounded-3xl  shadow-2xl shadow-white/10 aspect-video min-w-[300px] w-[300px] h-[200px]"
+              src={image}
+              alt={`Captura de pantalla del proyecto ${image}`}
+            />
+            <nav class="flex flex-row justify-center items-center gap-3 pt-4">
+              <Button href={github} class="bg-violet-700">
+                <GithubIcon class="size-4" /> Repositorio
+              </Button>
+              <Button href={link}>
+                <CodeIcon /> Sitio web
+              </Button>
+            </nav>
+          </div>
+          <div class="max-w-[500px]">
+            <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+              {title}
+            </h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-2 flex-wrap">
+              {tags.map((tag) => (
+                <li class="pb-2">
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      </>
+    )
+  )
 }
+<a href="/proyects">Ver todos</a>
 
 <style>
   .button {
